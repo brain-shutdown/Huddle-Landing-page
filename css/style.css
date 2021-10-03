@@ -1,0 +1,207 @@
+:root {
+    --color-violet: hsl(257, 40%, 49%);
+    --color-magenta: hsl(300, 69%, 71%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+@media screen and (min-width: 980px) {
+    .container {
+        width: 90%;
+        max-width: 1140px;
+    }
+}
+
+/* ************ */
+/* TYPOGRAPHY */
+/* ************ */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    width: 100vw;
+    margin: 1.5rem auto;
+    background: url('/images/bg-mobile.svg'), var(--color-violet);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+@media screen and (min-width: 980px) {
+    body {
+        background: url('/images/bg-desktop.svg'), var(--color-violet);
+        height: 100vh;
+    }
+}
+
+/* ************ */
+/* BUTTONS */
+/* ************ */
+.btn {
+    white-space: nowrap;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    outline: 0;
+    cursor: pointer;
+    box-shadow: 0 5px 20px -5px #333;
+    border: 0;
+    border-radius: 100px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn--block {
+    width: 200px;
+    display: inline-block; /* For anchor tags, which are inline */
+}
+
+.btn--primary {
+    background: white;
+    color: var(--color-violet);
+}
+.btn--primary:hover {
+    background: var(--color-magenta);
+    color: white;
+}
+
+@media screen and (min-width: 968px) {
+    .btn {
+        padding: 1.5rem;
+        font-size: 1.5rem;
+    }
+    .btn--block {
+        width: 175px;
+    }
+}
+
+/* ************* */
+/* LOGO & MOCKUP */
+/* ************* */
+.logo {
+    height: 30px;
+    margin-bottom: 5rem;
+}
+
+.mockup {
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 980px) {
+    .logo {
+        height: 50px;
+    }
+}
+
+/* ************* */
+/* HUDDLE */
+/* ************* */
+.huddle {
+    text-align: center;
+}
+
+.huddle__heading {
+    margin-bottom: 1.5rem;
+}
+
+.huddle__info {
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 980px) {
+    .huddle {
+        text-align: left;
+    }
+    .huddle__heading {
+        font-size: 3.5rem;
+    }
+}
+
+/* ************* */
+/* FOOTER */
+/* ************* */
+.footer {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-container {
+    margin: 0 0.5rem;
+    border: 1px solid white;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.icon-container:hover {
+    color: var(--color-magenta);
+    border-color: var(--color-magenta);
+}
+
+@media screen and (min-width: 980px) {
+    .footer {
+        margin-top: 0;
+        justify-content: flex-end;
+    }
+}
+
+/* ************ */
+/* GRID */
+/* ************ */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 980px) {
+    .grid--1x2 {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+}
